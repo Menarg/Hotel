@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    /* padding: 0; */
 }
 
 body {
@@ -11,11 +10,16 @@ body {
 
 h1 {
     font-size: 4rem;
-    color: #c8a32b;
+    color: #bb811c;
+    text-shadow: 0px 2px black;
 }
 
 h2 {
     font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
 }
 
 p {
@@ -27,8 +31,174 @@ p {
     display: grid;
     grid-template-columns: 100%;
     grid-auto-rows: auto;
+    background-color: #deb887;
 }
 
-.home__intro {
-    background-image: ;
+header { /* applies to all pages so they look the same */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-intro {
+    background-image: url("/bonzai-assets/assets/photos/09-day.jpg");
+}
+
+.navigation {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin: 1rem;
+    color: #bb811c;
+}
+
+.navigation a:hover {
+    color: aliceblue;
+}
+
+.navigation .active {
+    text-decoration: underline;
+}
+
+.home-content {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.home__section {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    margin: 2rem;
+}
+
+.home__section__img {
+    max-width: 100%;
+}
+
+.booking-intro {
+    background-image: url("/bonzai-assets/assets/photos/05-day.jpg")
+}
+
+.booking-searchbar {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.booking-searchbar input {
+    margin-bottom: 0.5rem;
+    height: 2rem;
+    font-size: 1.5rem;
+}
+
+.booking-content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+}
+
+.room {
+    max-width: 100%;
+    padding: 0.5rem;
+    border: 3px solid #bb811c;
+    margin: 1rem;
+}
+
+.room__img {
+    max-height: 20rem;
+    max-width: 100%;
+}
+
+.room__button {
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    background-color: beige;
+    border-radius: 2rem;
+}
+
+.room__button:hover {
+    background-color: #ebd7ad;
+}
+
+.room__button:active {
+    background-color: #e1c896;
+}
+
+.facilities-intro {
+    background-image: url("/bonzai-assets/assets/photos/06-night.jpg");
+}
+
+.facilities-content {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.facilities-content__section {
+    padding: 1rem;
+}
+
+.facilities-content__section__img {
+    max-width: 100%;
+}
+
+footer {
+    background-color: #d1a66d;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+footer img {
+    max-width: 10rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    .navigation {
+        flex-flow: row wrap;
+    }
+
+    .booking-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .facilities-content {
+        flex-flow: row wrap;
+    }
+
+    .booking-searchbar {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1960px) {
+    .booking-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
